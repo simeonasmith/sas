@@ -1,13 +1,13 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME
+  repo: simeonasmith/sas
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: "https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME"
-display_url: "https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME"
+site_url: "https://simeonasmith.github.io/sas"
+display_url: "https://simeonasmith.github.io/sas"
 logo_url: ""
 
 publish_mode: editorial_workflow
