@@ -1,7 +1,7 @@
 title: "Simeon A. Smith"
 description: "Essays, criticism, notes, and occasional provocations."
 url: ""
-baseurl: ""
+baseurl: "/sas"
 
 markdown: kramdown
 permalink: /:title/
