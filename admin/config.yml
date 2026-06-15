@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME"
+display_url: "https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME"
+logo_url: ""
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Essays"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "{{slug}}/"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle / standfirst", name: "subtitle", widget: "string", required: false }
+      - { label: "Category", name: "category", widget: "select", options: ["Essays", "Music", "Culture", "Education", "Reviews", "Notes"], default: "Essays" }
+      - { label: "Publication date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Body", name: "body", widget: "markdown" }

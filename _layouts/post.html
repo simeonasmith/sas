@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="article-page">
+  <div class="kicker">{{ page.category | default: "Essay" }}</div>
+  <h2>{{ page.title }}</h2>
+  {% if page.subtitle %}
+    <p class="subtitle">{{ page.subtitle }}</p>
+  {% endif %}
+  <div class="meta">{{ page.date | date: "%-d %B %Y" }} · {% assign words = content | number_of_words %}{% assign minutes = words | divided_by: 220 | plus: 1 %}{{ minutes }} min read</div>
+
+  <div class="article-body">
+    {{ content }}
+  </div>
+</article>

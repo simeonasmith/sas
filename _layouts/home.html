@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<section>
+  <div class="section-heading">
+    <h2>Latest essays</h2>
+    <p>Click any piece to read it.</p>
+  </div>
+
+  {% if site.posts.size == 0 %}
+    <article class="about-card">
+      <h2>No articles yet</h2>
+      <p>Log in through the private desk to publish your first essay.</p>
+    </article>
+  {% else %}
+    <div class="article-grid">
+      {% for post in site.posts %}
+        <article class="article-card">
+          <a href="{{ post.url | relative_url }}">
+            <div>
+              <div class="kicker">{{ post.category | default: "Essay" }}</div>
+              <h3>{{ post.title }}</h3>
+              <p class="subtitle">{{ post.subtitle | default: post.excerpt | strip_html | truncate: 145 }}</p>
+            </div>
+            <div class="meta">{{ post.date | date: "%-d %B %Y" }} · {% assign words = post.content | number_of_words %}{% assign minutes = words | divided_by: 220 | plus: 1 %}{{ minutes }} min read</div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>

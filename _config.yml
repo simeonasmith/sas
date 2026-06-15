@@ -1,0 +1,21 @@
+title: "Simeon A. Smith"
+description: "Essays, criticism, notes, and occasional provocations."
+url: ""
+baseurl: ""
+
+markdown: kramdown
+permalink: /:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-feed
