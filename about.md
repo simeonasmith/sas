@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
+Simeon A. Smith is a musician, teacher, researcher, and writer based in Surrey, England. This website is a platform for the publication of his written work on a variety of subjects.
 
-This is a simple essay site for publishing pieces in a newspaper-style layout.
-
-Edit this page through Decap CMS or directly in GitHub.
+His education and professional life have taken him through several disciplines, including music, anthropology, and law. He currently serves as Director of Music at Reed’s School.
