@@ -90,6 +90,16 @@ h1 {
     border-right: 1px solid var(--rule);
 }
 
+.nav a:hover {
+    background: #d7e0e4;
+    color: var(--accent-dark);
+}
+
+.nav a.active:hover {
+    background: var(--accent);
+    color: white;
+}
+
 main {
   max-width: 1180px;
   margin: 0 auto;
